@@ -1,0 +1,54 @@
+{% extends 'catalog/catalog_base.html' %}
+{% block content %}
+    {% for cat in categories %}
+        <!-- Shop Item -->
+        <div class="four-shop columns isotope-item">
+            <div class="shop-item">
+                <figure>
+                    <a href="{{ cat.get_absolute_url }}"><img src="{{ cat.img.url }}" alt=""/></a>
+                    <figcaption class="item-description">
+                        <a href="{{ cat.get_absolute_url }}"><h5>{{ cat.title }}</h5></a>
+                        <br>
+                        <a href="{{ cat.get_absolute_url }}" class="button color">Подробнее</a>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+
+{% block categories %}
+
+    <!-- Sidebar -->
+
+    <div class="four floated sidebar right">
+        <aside class="sidebar">
+
+            <!-- Categories -->
+            <nav class="widget">
+                <h4>Категории</h4>
+                <ul class="categories">
+                    {% for cat in categories %}
+                        <li><a href="{{ cat.get_absolute_url }}">{{ cat.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+
+        </aside>
+    </div>
+    <!-- Sidebar / End -->
+
+{% endblock %}
+
+{% block breadctumbs %}
+
+    <nav id="breadcrumbs">
+        <ul>
+            <li>Вы сдесь:</li>
+            <li><a href="/">Главная</a></li>
+            <li>Каталог</li>
+        </ul>
+    </nav>
+
+{% endblock %}

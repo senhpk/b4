@@ -1,0 +1,99 @@
+{% extends 'index/index_base.html' %}
+{% block slider %}
+
+    <section id="layerslider-container">
+        <div id="layerslider" style="width: 1020px; height: 450px; margin: 0 auto;">
+
+            {% for slide in slides %}
+                <article class="ls-layer" style="slidedelay: 10000;">
+                    <a class="ls-s2" href="{{ slide.post.get_absolute_url }}" rel="">
+                        <img src="{{ slide.img.url }}" alt=""/></a>
+
+                    <h3 class="ls-s1 caption-transparent" style="top: 357px; left: 40px;">{{ slide.title }}</h3>
+                </article>
+            {% endfor %}
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block textblocks %}
+
+    <section class="icon-box-container">
+
+        {% for textblock in textblocks %}
+
+            <div class="one-third column">
+                <article class="icon-box">
+                    <i class="icon-check"></i>
+
+                    <h3>{{ textblock.title|safe }}</h3>
+
+                    <p>{{ textblock.block|safe }}</p>
+                </article>
+            </div>
+
+        {% endfor %}
+
+    </section>
+
+{% endblock %}
+
+{% block catalog %}
+
+    <section class="jcarousel recent-work-jc">
+        <ul>
+
+            {% for cat in categories %}
+                <!-- Recent Work Item -->
+                <li class="four columns">
+                    <a href="{{ cat.get_absolute_url }}" class="portfolio-item">
+                        <figure>
+                            <figcaption class="item-description">
+                                <h5>{{ cat.title }}</h5>
+                            </figcaption>
+                            <img src="{{ cat.img.url }}" alt=""/>
+                        </figure>
+                    </a>
+                </li>
+            {% endfor %}
+
+        </ul>
+    </section>
+
+{% endblock %}
+
+{% block posts %}
+
+    {% for post in posts %}
+        <div class="four columns alpha">
+            <article class="recent-blog">
+                <section class="date">
+                    <span class="day">{{ post.datetime|date:"j" }}</span>
+                    <span class="month">{{ post.datetime|date:"M" }}</span>
+                </section>
+                <h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
+
+                <p>{{ post.short_content }}</p>
+            </article>
+        </div>
+    {% endfor %}
+
+{% endblock %}
+
+{% block docs %}
+
+    <ul>
+    {% for doc in docs %}
+        <li><a href="{{ doc.file.url }}"><h4>{{ doc.title }}</h4></a></li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
+
+{% block basic %}
+    <meta charset="utf-8">
+    <meta name="keywords" content="{{ DEFAULT_KEYWORD }}"/>
+    <meta name="description" content="{{ DEFAULT_DESCRIPTION }}"/>
+    <title>{{ DEFAULT_TITLE }}</title>
+{% endblock %}

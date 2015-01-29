@@ -1,0 +1,417 @@
+﻿{% load staticfiles %}
+<!DOCTYPE html>
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="keywords"
+          content="Бизнесфор: каталог продукции, производство воздуховодов, вентиляция, детали, воздуховоды круглые, воздуховоды прямоугольные, шумоглушители"/>
+    <meta name="description" content="Производство воздуховодов и деталей систем вентиляции"/>
+    <title>Бизнесфор: производство воздуховодов, вентиляция, детали, воздуховоды круглые, каталог продукции, воздуховоды
+        прямоугольные, шумоглушители</title>
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static "css/colors/orange.css" %}" id="colors">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="{% static "scripts/jquery.flexslider.js" %}"></script>
+    <script src="{% static "scripts/jquery.selectnav.js" %}"></script>
+    <script src="{% static "scripts/jquery.twitter.js" %}"></script>
+    <script src="{% static "scripts/jquery.modernizr.js" %}"></script>
+    <script src="{% static "scripts/jquery.easing.1.3.js" %}"></script>
+    <script src="{% static "scripts/jquery.contact.js" %}"></script>
+    <script src="{% static "scripts/jquery.isotope.min.js" %}"></script>
+    <script src="{% static "scripts/jquery.jcarousel.js" %}"></script>
+    <script src="{% static "scripts/jquery.fancybox.min.js" %}"></script>
+    <script src="{% static "scripts/jquery.transit-modified.js" %}"></script>
+    <script src="{% static "scripts/jquery.layerslider-transitions.js" %}"></script>
+    <script src="{% static "scripts/jquery.layerslider.min.js" %}"></script>
+    <script src="{% static "scripts/jquery.shop.js" %}"></script>
+    <script src="{% static "scripts/custom.js" %}"></script>
+
+</head>
+<body>
+
+<!-- Wrapper / Start -->
+<div id="wrapper">
+
+    <!-- Header
+    ================================================== -->
+    <div id="top-line"></div>
+
+    <!-- 960 Container -->
+    <div class="container">
+
+        <!-- Header -->
+        <header id="header">
+
+            <!-- Logo -->
+            <div class="ten columns">
+                <div id="logo">
+                    <h1><a href="/"><img src="{% static "images/logo.png" %}" alt="«Бизнес Фор»"/></a></h1>
+
+                    <div id="tagline">Производство воздуховодов
+                        и деталей систем вентиляции
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+
+            <!-- Social / Contact -->
+            <div class="six columns">
+
+                <!-- Social Icons -->
+                <ul class="social-icons">
+                    <li class="vk"><a href="#">vk</a></li>
+                    <li class="youtube"><a href="#">youtube</a></li>
+                </ul>
+
+
+                <div class="clearfix"></div>
+
+                <!-- Contact Details -->
+                <div class="contact-details">Контактный телефон: +7 (495) 664-22-71</div>
+
+                <div class="clearfix"></div>
+
+                <!-- Search -->
+                <nav class="top-search">
+                    <form action="../404-page.html" method="get">
+                        <button class="search-btn"></button>
+                        <input class="search-field" type="text" onblur="if(this.value=='')this.value='Search';"
+                               onfocus="if(this.value=='Search')this.value='';" value="Search"/>
+                    </form>
+                </nav>
+
+            </div>
+        </header>
+        <!-- Header / End -->
+
+        <div class="clearfix"></div>
+
+    </div>
+    <!-- 960 Container / End -->
+
+
+    <!-- Navigation
+    ================================================== -->
+    <nav id="navigation" class="style-1">
+
+        <div class="left-corner"></div>
+        <div class="right-corner"></div>
+
+        <ul class="menu" id="responsive">
+
+            <li><a href="/"><i class="halflings white home"></i> Главная</a></li>
+
+            <li><a href="#"><i class="halflings white info-sign"></i> Компания</a>
+                <ul>
+                    <li><a href="/blog"> Новости</a></li>
+                    <li><a href="#"> Фото производства</a></li>
+                    <li><a href="/faq"> Вопросы и ответы</a></li>
+                    <li><a href="#"> Вакансии</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#"><i class="halflings white folder-open"></i> Документы</a>
+                <ul>
+                    <li><a href="#"> Свидетельство</a></li>
+                    <li><a href="#"> Бланк заказа</a></li>
+                    <li><a href="#"> Сертификаты</a></li>
+                    <li><a href="#"> Письма</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#"><i class="halflings white briefcase"></i> Продукция</a>
+                <ul>
+                    <li><a href="/catalog"> Каталог</a></li>
+                    <li><a href="#"> Продукция на складе</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#"><i class="halflings white list"></i> Прайс-лист</a>
+                <ul>
+                    <li><a href="#"> Воздуховоды</a></li>
+                    <li><a href="#"> ДСВ</a></li>
+                    <li><a href="#"> Решетки Диффузоры</a></li>
+                    <li><a href="#"> Оборудование</a></li>
+                    <li><a href="#"> Расходный материал</a></li>
+                </ul>
+
+
+            </li>
+
+            <li><a href="#"><i class="halflings white wrench"></i> Услуги</a>
+                <ul>
+                    <li><a href="#"> Монтаж</a></li>
+                    <li><a href="#"> Проектирование</a></li>
+                    <li><a href="#"> Доставка</a></li>
+                </ul>
+            </li>
+
+            <li><a href="/contact" id="current"><i class="halflings white envelope"></i> Контакты</a></li>
+
+        </ul>
+    </nav>
+    <div class="clearfix"></div>
+
+
+    <!-- Content
+    ================================================== -->
+    <div id="content">
+
+
+        <!-- 960 Container -->
+        <div class="container floated">
+
+            <div class="sixteen floated page-title">
+
+                <h2>Контакты</h2>
+
+                <nav id="breadcrumbs">
+                    <ul>
+                        <li>Вы сдесь:</li>
+                        <li><a href="../index/index_base.html">Главная</a></li>
+                        <li>Контакты</li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+        <!-- 960 Container / End -->
+
+
+        <!-- 960 Container -->
+        <div class="container floated">
+
+            <!-- Sidebar -->
+            <div class="four floated sidebar left">
+                <aside class="sidebar padding-reset">
+
+                    <div class="widget">
+                        <h4>Информация</h4>
+
+                        <p>Свяжитесь с нами удобным для Вас способом</p>
+                    </div>
+
+                    <div class="widget">
+                        <h4>Способы связи</h4>
+
+                        <ul class="contact-informations">
+                            <li><span
+                                    class="address">Офис: Россия, Московская область, Химки, улица Энгельса, 7/15 </span>
+                            </li>
+                            <br/>
+                            <li><span class="address">Склад: Россия, МО Солнечногорский р-н, поселение Кутузовское в районе дер Подолино Логистический центр «ФДТ» Ангар №9</span>
+                            </li>
+                            <li><span class="address"></span></li>
+                        </ul>
+
+                        <ul class="contact-informations second">
+                            <li><i class="halflings headphones"></i>
+
+                                <p>+7 (495) 664-22-71</p></li>
+                            <li><i class="halflings envelope"></i>
+
+                                <p>info@business4.ru</p></li>
+                            <li><i class="halflings globe"></i>
+
+                                <p>www.business4.ru</p></li>
+                        </ul>
+
+                    </div>
+
+
+                </aside>
+            </div>
+            <!-- Sidebar / End -->
+
+            <!-- Page Content -->
+            <div class="eleven floated right">
+                <section class="page-content">
+
+                    <h3 class="margin-reset">Схема проезда</h3>
+
+                    <br/>
+
+                    <h4 class="margin-reset">Офис: Россия, Московская область, Химки, улица Энгельса, 7/15</h4>
+
+                    <br/>
+
+                    <!-- Yandex Maps -->
+                    <section class="google-map-container">
+
+                        <div id="googlemaps" class="google-map google-map-full" style="padding-bottom:0%"></div>
+
+                        <script type="text/javascript" charset="utf-8"
+                                src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=dPeKK_vDX5VGYJBC6sagOGp07YUs5xxo&width=600&height=450"></script>
+
+                    </section>
+                    <!-- Yandex Maps / End -->
+
+                    <br/>
+
+                    <h4 class="margin-reset">Склад: Россия, МО Солнечногорский р-н, поселение Кутузовское в районе дер
+                        Подолино Логистический центр «ФДТ» Ангар №9</h4>
+
+                    <br/>
+
+                    <!-- Yandex Maps -->
+                    <section class="google-map-container">
+
+                        <div id="googlemaps" class="google-map google-map-full" style="padding-bottom:0%"></div>
+
+                        <script type="text/javascript" charset="utf-8"
+                                src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=QNdD4yNyljIjBu_-xnCtJjGrg_pCJ1Fz&width=600&height=450"></script>
+
+                    </section>
+                    <!-- Yandex Maps / End -->
+
+                    <p style="text-align:center;" ><a href="/contact" class="button medium color">Скачать схему проезда</a></p>
+
+                    <br/>
+                    <br/>
+
+
+                    <h3 class="margin">Отправте нам сообщение по электронной почте</h3>
+
+                    <p class="margin">По общим вопросам или в случае, если вы не уверены,
+                        к кому следует обратиться, отправьте нам сообщение по электронной почте,
+                        заполнив и отправив приведенную ниже форму. Мы стараемся сразу отвечать на полученные сообщения.
+                    </p>
+
+                    <!-- Contact Form -->
+                    <section id="contact">
+
+                        <!-- Success Message -->
+                        <mark id="message"></mark>
+
+                        <!-- Form -->
+                        <form method="post" action="/send_email/" name="/send_email/"
+                              id="/send_email/">{% csrf_token %}
+
+                            <fieldset>
+
+                                <div>
+                                    <label for="name" accesskey="U">Имя:</label>
+                                    <input name="name" type="text" id="name"/>
+                                </div>
+
+                                <div>
+                                    <label for="email" accesskey="E">Email: <span>*</span></label>
+                                    <input name="email" type="email" id="email"
+                                           pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$"/>
+                                </div>
+
+                                <div>
+                                    <label for="comments" accesskey="C">Сообщение: <span>*</span></label>
+                                    <textarea name="comments" cols="40" rows="3" id="comments"
+                                              spellcheck="true"></textarea>
+                                </div>
+
+                            </fieldset>
+
+                            <input type="submit" class="submit" id="submit" value="Напишите нам"/>
+
+                            <div class="clearfix"></div>
+
+                        </form>
+
+                    </section>
+                    <!-- Contact Form / End -->
+
+
+                </section>
+            </div>
+            <!-- Page Content / End -->
+
+
+        </div>
+        <!-- 960 Container / End -->
+
+    </div>
+    <!-- Content / End -->
+
+</div>
+<!-- Wrapper / End -->
+
+
+<!-- Footer
+================================================== -->
+
+<!-- Footer / Start -->
+<footer id="footer">
+    <!-- 960 Container -->
+    <div class="container">
+
+        <!-- About -->
+        <div class="eight columns">
+            <h4>Бизнес Фор</h4>
+
+            <p>Производство воздуховодов и деталей систем вентиляции</p>
+
+        </div>
+
+        <!-- Contact Details -->
+        <div class="eight columns">
+            <h4>Контакты</h4>
+            <ul class="contact-details-alt">
+                <li><i class="halflings white map-marker"></i>
+
+                    <p><strong>Адрес:</strong> 125466 Москва, ул. Соколово-Мещерская, 26, офис 84.</p></li>
+                <li><i class="halflings white user"></i>
+
+                    <p><strong>Телефон:</strong> +7 (495) 664-22-71</p></li>
+                <li><i class="halflings white envelope"></i>
+
+                    <p><strong>Email:</strong> <a href="#">info@business4.ru</a></p></li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- 960 Container / End -->
+
+</footer>
+<!-- Footer / End -->
+
+
+<!-- Footer Bottom / Start  -->
+<footer id="footer-bottom">
+
+    <!-- 960 Container -->
+    <div class="container">
+
+        <!-- Copyrights -->
+        <div class="eight columns">
+            <div class="copyright">
+                © Copyright 2014 by <a href="#">Business4</a>. All Rights Reserved.
+            </div>
+        </div>
+
+    </div>
+    <!-- 960 Container / End -->
+
+</footer>
+<!-- Footer Bottom / End -->
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+{% extends 'catalog/product_base.html' %}
+{% block content %}
+
+    <!-- Page Content -->
+    <div class="eleven floated">
+        <div class="shop-page page-content">
+
+            <div class="six columns">
+                <section class="flexslider shop">
+                    <ul class="slides">
+                        <li><a href="{{ product.img.url }}" rel="fancybox-gallery" title="{{ product.title }}"><img
+                                src="{{ product.img.url }}" alt=""/></a></li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="five columns">
+                <div class="product-info">
+                    <h3 class="title">{{ product.title }}</h3>
+
+                    <p>{{ product.info|safe }}</p>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+            <br/>
+
+            <div class="eleven columns">
+                <!-- Tabs Navigation -->
+                <ul class="tabs-nav">
+                    <li class="active"><a href="#tab1">Описание</a></li>
+                    {% for tab in product.tab_img_set.all %}
+                        <li><a href="#{{ tab.get_id }}">{{ tab.title }}</a></li>
+                    {% endfor %}
+                    {% for tab in product.tab_text_set.all %}
+                        <li><a href="#{{ tab.get_id }}">{{ tab.title }}</a></li>
+                    {% endfor %}
+                </ul>
+
+                <!-- Tabs Content -->
+                <div class="tabs-container">
+                    <div class="tab-content" id="tab1">
+                        <p>{{ product.description|safe }}</p>
+                        <br/>
+
+                        <table class="standard-table shop">
+                            {% for prop in product.property_set.all %}
+                                <tr>
+                                    <th>{{ prop.name }}</th>
+                                    <td>{{ prop.value }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+
+
+                    </div>
+
+                    {% for tab in product.tab_img_set.all %}
+
+                        <div class="tab-content" id="{{ tab.get_id }}">
+                            <table class="standard-table shop">
+
+                                <h1>{{ tab.name }}</h1>
+                                <a href="{{tab.image_url|default_if_none:'#' }}" rel="fancybox-gallery" title="{{ tab.title }}"><img
+                                src="{{ tab.image_url|default_if_none:'#' }}" alt=""/></a>
+
+                            </table>
+                        </div>
+
+                    {% endfor %}
+
+                    {% for tab in product.tab_text_set.all %}
+
+                        <div class="tab-content" id="{{ tab.get_id }}">
+                            <table class="standard-table shop">
+
+                                <h1>{{ tab.name }}</h1>
+                                <p>{{ tab.description|safe }}</p>
+                            </table>
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+            <div class="line" style="margin-top: 20px; margin-bottom: 30px;"></div>
+
+
+            <div class="clearfix"></div>
+            <div style="margin-top: -10px;"></div>
+
+        </div>
+    </div>
+    <!-- Page Content / End -->
+{% endblock %}
+
+{% block categories %}
+
+    <!-- Sidebar -->
+    <div class="four floated sidebar right">
+        <aside class="sidebar">
+
+            <!-- Categories -->
+            <nav class="widget">
+                <h4>Категории</h4>
+                <ul class="categories">
+                    {% for cat in categories %}
+                        <li><a href="{{ cat.get_absolute_url }}">{{ cat.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+
+        </aside>
+    </div>
+    <!-- Sidebar / End -->
+
+{% endblock %}
+
+{% block breadctumbs %}
+
+    <nav id="breadcrumbs">
+        <ul>
+            <li>Вы сдесь:</li>
+            <li><a href="/">Главная</a></li>
+            {% for cat in product.all_categories %}
+                <li><a href="{{ cat.get_absolute_url }}">{{ cat.title }}</a></li>
+            {% endfor %}
+            <li>{{ product.title }}</li>
+        </ul>
+    </nav>
+
+{% endblock %}
+
+
+{% block basic %}
+    <meta charset="utf-8">
+    <meta name="keywords" content="{{ DEFAULT_KEYWORD }}"/>
+    <meta name="description" content="{{ DEFAULT_DESCRIPTION }}"/>
+    <title>{{ product.title }}</title>
+{% endblock %}
+
+
+
+
+

@@ -1,0 +1,25 @@
+{% extends 'about/about_base.html' %}
+{% block content %}
+
+
+    <!-- Texts -->
+    <div class="two-thirds column">
+        <h3 style="margin: -10px 0 15px 0;">{{ about.title }}</h3>
+
+        <p>{{ about.content|safe }}</p>
+
+    </div>
+
+    <div class="one-third column">
+        <h3 style="margin: -10px 0 15px 0;">Cертификат</h3>
+
+        <!-- Large Notice -->
+        <div class="large-notice">
+
+            <img src="{{ about.img.url }}"/>
+        </div>
+
+    </div>
+    <!-- Texts / End -->
+
+{% endblock %}

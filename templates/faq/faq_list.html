@@ -1,0 +1,16 @@
+{% extends 'faq/faq_base.html' %}
+{% block content %}
+    {% for faq in object_list %}
+        <div class="toggle-wrap">
+            <span class="trigger "><a href="#"><i class="toggle-icon"></i>{{ faq.question }}
+            </a></span>
+
+            <div class="toggle-container">
+            <p>{{ faq.content|safe }}</p>
+            </div>
+        </div>
+    {% empty %}
+    <p>Нет постов</p>
+    {% endfor %}
+
+{% endblock %}

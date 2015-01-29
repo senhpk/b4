@@ -1,0 +1,11 @@
+{% extends 'documents/document_base.html' %}
+{% block content %}
+    {% for doc in object_list %}
+        <br />
+        <li><a href="{{ doc.file.url }}"><h4>{{ doc.title }}</h4></a></li>
+        <br />
+    {% empty %}
+    <p>Нет постов</p>
+    {% endfor %}
+
+{% endblock %}
